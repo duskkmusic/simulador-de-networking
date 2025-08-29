@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>LinkedIn do Dusk</title>
+    <!-- Font Awesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f2ef;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0a66c2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 800px;
+            margin: 30px auto;
+        }
+
+        .perfil {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .perfil-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .perfil-info span {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .mensagem-input {
+            flex: 1;
+            margin-right: 10px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .enviar-btn {
+            background-color: #0a66c2;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .enviar-btn:hover {
+            background-color: #004182;
+        }
+
+        footer {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        footer a {
+            margin: 0 15px;
+            font-size: 24px;
+            color: #0a66c2;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #004182;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>LinkedIn do Dusk</h1>
+</header>
+
+<div class="container">
+
+    <div class="perfil" id="perfil-Carlos">
+        <div class="perfil-info">
+            <span>Carlos Silva</span>
+            <small>Programador Front-end</small>
+        </div>
+        <input class="mensagem-input" id="mensagem-carlos" placeholder="Digite a mensagem"/>
+        <button class="enviar-btn" id="enviar-carlos">Enviar</button>
+    </div>
+
+    <div class="perfil" id="perfil-Ana">
+        <div class="perfil-info">
+            <span>Ana Souza</span>
+            <small>Desenvolvedora Python</small>
+        </div>
+        <input class="mensagem-input" id="mensagem-ana" placeholder="Digite a mensagem"/>
+        <button class="enviar-btn" id="enviar-ana">Enviar</button>
+    </div>
+
+    <div class="perfil" id="perfil-Joao">
+        <div class="perfil-info">
+            <span>João Pereira</span>
+            <small>Engenheiro de Software</small>
+        </div>
+        <input class="mensagem-input" id="mensagem-joao" placeholder="Digite a mensagem"/>
+        <button class="enviar-btn" id="enviar-joao">Enviar</button>
+    </div>
+
+</div>
+
+<footer>
+    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+</footer>
+
+<script>
+    document.querySelectorAll(".enviar-btn").forEach(botao => {
+        botao.addEventListener("click", () => {
+            const input = botao.previousElementSibling;
+            console.log(`Mensagem enviada: ${input.value}`);
+            alert(`Mensagem enviada: ${input.value}`);
+        });
+    });
+</script>
+
+</body>
+</html>
